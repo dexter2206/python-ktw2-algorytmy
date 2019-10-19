@@ -39,7 +39,7 @@ Funkcja ta powinna zwracać listę sum częściowych, tzn. listę składającą 
     
 5. Napisać funkcję `find_peak(sequence)` zwracającą wierzchołek danej listy liczb. Wierzchołkiem
     nazywamy element listy, który jest większy od obydwu swoich sąsiadów (lub od jednego z nich,
-    jeżeli jest to skrajny element). 
+    jeżeli jest to skrajny element). Na potrzeby tego zadania załóż, że w wejściowej liście nie ma duplikatów.
  
 6. Napisać funkcję, która dla danej liczby całkowitej dodatniej `n` zwróci listę bitów w jej
     binarnym rozszerzeniu (zaczynając od najmłodszego bitu). Na przykład, dla liczby `13`
