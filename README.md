@@ -88,3 +88,10 @@ Funkcja ta powinna zwracać listę sum częściowych, tzn. listę składającą 
 
 2. Napisać funkcję `gcd(a, b)` znajdującą największy wspólny dzielnik liczb `a` i `b`.
    Przygotować rekurencyjną oraz iteracyjną wersję.
+
+## Sortowanie
+3. Zaimplementować algorytm sortowania bąbelkowego.
+4. Zaimplementować algorytm sortowania przez wstawianie.
+5. Zaimplementować algorytm sortowania przez scalanie.
+6. Zaimplementować algorytm sortowania szybkiego.
+7. Zmodyfikować implementację jednego z wybranych algorytmów tak, aby przyjmowała jako parametry `key` oraz `reverse` o znaczeniu takim jak wbudowana funkcja `sorted`.
