@@ -100,9 +100,9 @@ Funkcja ta powinna zwracać listę sum częściowych, tzn. listę składającą 
 ### Stos
 1. Zaimplementuj klasę `Stack` będącą wrapperem wokół klasy `list`, udostępniającą jedynie metody do obsługi stosu. Dokładniej, klasa ta powinna posiadać następujące metody:
 - `push(element)` - odkłada nowy element na stos
-- `pop(element)` - ściąga ostatni element ze stosu i go zwraca
-- `peek(element)` - zwraca ostatni element ze stosu (ale go nie  ściąga!)
-- `len(element)` - zwraca wysokość stosu
+- `pop()` - ściąga ostatni element ze stosu i go zwraca
+- `peek()` - zwraca ostatni element ze stosu (ale go nie  ściąga!)
+- `__len__` - zwraca wysokość stosu
 2. Napisz program walidujący poprawność nawiasów w danym wyrażeniu. Użyj w tym celu stosu.
 3. Notacja postfixowa to sposób zapisu wyrażeń arytmetycznych, w którym operator jest umieszczony PO operandach. Na przykład wyrażenie "5 + 3" w notacji postfixowej przyjmuje postać "5 3 +", a wyrażenie "5 * (2 - 1) + 4" przyjmuje postać "5 2 1 - * 4 +". Można łatwo obliczyć wartość wyrażenia danego postacią infixową używając stosu. Algorytm wygląda następująco (zakładając poprawność wejściowego wyrażenia):
    1. Zainicjuj pusty stos.
