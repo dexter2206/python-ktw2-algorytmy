@@ -95,3 +95,34 @@ Funkcja ta powinna zwracać listę sum częściowych, tzn. listę składającą 
 5. Zaimplementować algorytm sortowania przez scalanie.
 6. Zaimplementować algorytm sortowania szybkiego.
 7. Zmodyfikować implementację jednego z wybranych algorytmów tak, aby przyjmowała jako parametry `key` oraz `reverse` o znaczeniu takim jak wbudowana funkcja `sorted`.
+
+## Podstawowe struktury danych
+### Stos
+1. Zaimplementuj klasę `Stack` będącą wrapperem wokół klasy `list`, udostępniającą jedynie metody do obsługi stosu. Dokładniej, klasa ta powinna posiadać następujące metody:
+- `push(element)` - odkłada nowy element na stos
+- `pop(element)` - ściąga ostatni element ze stosu i go zwraca
+- `peek(element)` - zwraca ostatni element ze stosu (ale go nie  ściąga!)
+- `len(element)` - zwraca wysokość stosu
+2. Napisz program walidujący poprawność nawiasów w danym wyrażeniu. Użyj w tym celu stosu.
+3. Notacja postfixowa to sposób zapisu wyrażeń arytmetycznych, w którym operator jest umieszczony PO operandach. Na przykład wyrażenie "5 + 3" w notacji postfixowej przyjmuje postać "5 3 +", a wyrażenie "5 * (2 - 1) + 4" przyjmuje postać "5 2 1 - * 4 +". Można łatwo obliczyć wartość wyrażenia danego postacią infixową używając stosu. Algorytm wygląda następująco (zakładając poprawność wejściowego wyrażenia):
+   1. Zainicjuj pusty stos.
+   2. Dla każdego elementu wyrażenia:
+      - jeżeli ten element jest liczbą, odłóż go na stos
+      - jeżeli jest operatorem, zdejmij ze stosu dwie liczby, zaaplikuj do nich operator, a następnie odłóż wynik na stos
+   3. Ostatni pozostały na stosie element jest ostateczną wartością wyrażenia.
+   
+   Zaimplementuj w.w. algorytm w Pythonie. Przyjmij, że wyrażenie jest dane jako lista, której elementami są albo liczby, albo operatory.
+4. Problem nachodzących przedziałów. Załóżmy, że mamy dane przedziały liczbowe postaci [a, b], na przykład: [1, 3], [5, 6], [2, 4]. Chcemy połączyć te, które na siebie nachodzą. W powyższym przykładzie mielibyśmy zatem [1, 4] oraz [5, 6]. Wymyśl używający stosu algorytm pozwalający na wykonanie takiej operacji.
+
+5. Czy da się zaimplementować (być może używając dodatkowej struktury danych) stos, w którym dostęp do bieżącego maximum jest realizowany w stałym czasie? Jeśli tak, zaimplementować klasę `MaxStack` posiadającą metodę `max()` zwracającą bieżące maksimum stosu.
+
+### Listy dowiązane
+1. Zaimplementować w Pythonie listę dowiązaną. Spróbować odwzorować interfejs wbudowanej klasy `list`.
+
+### Kolejki
+1. Zaimplementować funkcję `tail(fileobj, n)` wypisującą ostatnie `n` wierszy danego pliku.
+2. Zaimplementować własną uproszczoną wersję dekoratora `lru_cache(n)` korzystającego z kolejki. 
+
+
+### Drzewo binarne
+1. Zaimplementować w Pythonie binarne drzewo poszukiwań.
